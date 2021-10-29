@@ -54,3 +54,65 @@
     }
   }
 }
+
+.modal 
+{
+    display: none;
+    &__active {
+      display: block;
+      position: fixed;
+      border: solid 2px black;
+      top: 20px; 
+      left: 50%;
+      transform: translateX(-50%);
+      @include mixins.centered;
+      background: white; 
+      border-radius: 10px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__title {
+       color: mixins.$color-purple; 
+       text-align: center;
+       font-size: 36px;
+       padding-top: 20px;
+       
+    }
+}
+
+.modal__form 
+{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+
+    input[type="submit"]
+    {
+        background: mixins.$color-purple;
+        border: none;
+        border-radius: 10px;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        width: 200px;
+        color: white;
+        font-weight: 500;
+        margin: 2em auto 0;
+    }
+
+    input[type="email"] 
+    {
+        padding: 12px 0px;
+    }
+
+    textarea {
+        padding: 12px 8px;
+        height: 150px;
+        resize: none;
+    }
+
+    label {
+        margin-top: 20px;
+    }
+}
